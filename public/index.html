@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff4d6d" />
+  <title>MeetFinder</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="logo">🍔 Meet<span>Finder</span></a>
+    <button id="matchesBtn" class="pill hidden" type="button">❤️ <span id="matchCount">0</span></button>
+  </header>
+
+  <main id="app"></main>
+
+  <div id="matchModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="matchTitle">
+    <div class="modal-card">
+      <div class="confetti" aria-hidden="true">🎉</div>
+      <h2 id="matchTitle">It's a Match!</h2>
+      <p id="matchText"></p>
+      <div id="matchEmoji" class="big-emoji"></div>
+      <div class="row">
+        <a id="matchMap" class="btn primary" target="_blank" rel="noopener">Directions</a>
+        <button id="matchKeep" class="btn ghost" type="button">Keep swiping</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
